@@ -33,9 +33,11 @@ const NavBar = () =>{
                 </Typography>
                   <GitHub sx={{ display:{xs:"block",sm:"none"}}}/>
                   <Link to="/repos" className="link">Repos</Link>
-                <Icons>
-                    <Avatar src="https://avatars.githubusercontent.com/u/41730664?v=4" sx={{ width:30,height:30 }}/>
-                </Icons>
+                <a href="https://github.com/FREDVUNI" target="_blank" rel="noreferrer">
+                    <Icons>
+                        <Avatar src="https://avatars.githubusercontent.com/u/41730664?v=4" sx={{ width:30,height:30 }}/>
+                    </Icons>
+                </a>
             </StyledToolbar>
     </AppBar>
     </>

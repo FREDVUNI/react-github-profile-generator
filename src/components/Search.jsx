@@ -11,6 +11,8 @@ const Search = () =>{
     const searchValue = (e) =>{
         let inputValue = e.target.value
         setUser(inputValue)
+        
+        localStorage.setItem("search",JSON.stringify(inputValue))
     }
 
     const submitHandler = () =>{
@@ -50,12 +52,13 @@ const Search = () =>{
         </div>
         <div className="container">
             {
-                profile.id !== undefined  ? 
-                    loading ? <Card profile={profile} key={profile.id}/> : <Loader/>
-                :
-                <div className="empty">
-                    <h2>This username is invalid</h2>
-                </div>
+                // profile.id !== undefined  ? 
+                //     loading && profile.id !== undefined ? <Card profile={profile} key={profile.id}/> : <Loader/>
+                // :
+                // <div className="empty">
+                //     <h2>This username is invalid</h2>
+                // </div>
+                loading && profile.id !== undefined ? <Card profile={profile} key={profile.id}/> : <Loader/>
             }
         </div>
         </>
