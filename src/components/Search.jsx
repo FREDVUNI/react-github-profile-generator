@@ -1,9 +1,12 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState,useEffect,useContext} from 'react'
 import SearchIcon from "../search.svg"
 import Card from './Card'
 import Loader from './Loader'
+import {SearchContext} from '../context/SearchContext'
 
 const Search = () =>{
+    const {updateSearch} = useContext(SearchContext)
+
     const [profile,setProfile] = useState({})
     const [user,setUser] = useState("")
     const [loading,setLoading] = useState(false)
@@ -12,7 +15,7 @@ const Search = () =>{
         let inputValue = e.target.value
         setUser(inputValue)
         
-        localStorage.setItem("search",JSON.stringify(inputValue))
+        updateSearch(inputValue)
     }
 
     const submitHandler = () =>{

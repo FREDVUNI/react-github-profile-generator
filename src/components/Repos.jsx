@@ -5,7 +5,7 @@ import Repo from './Repo'
 import Loader from './Loader'
 
 const Repos = () =>{
-    const username = useContext(SearchContext)
+    const {username} = useContext(SearchContext)
     const [repos,setRepos] = useState([])
     const [loading,setLoading] = useState(false)
 
@@ -13,7 +13,7 @@ const Repos = () =>{
         fetch(`https://api.github.com/users/${username}/repos`)
         .then((response)=> response.json())
         .then((data)=>{
-            console.log(data)
+            // console.log(data)
             setLoading(true)
             return setRepos(data)
         })
@@ -23,7 +23,8 @@ const Repos = () =>{
     }
     useEffect(()=>{
         getRepos()
-    })
+        // eslint-disable-next-line 
+    },[])
 
     return(
         <>
