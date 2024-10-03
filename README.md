@@ -35,8 +35,6 @@ This app interacts with the [GitHub API](https://docs.github.com/en/rest) to:
   - Language used
   - Link to the repository
 
----
-
 ## GitHub API
 
 The app uses the following GitHub API endpoints:
