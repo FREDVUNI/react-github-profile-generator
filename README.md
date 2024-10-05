@@ -40,7 +40,7 @@ The **React GitHub Profile Generator** is a web application that allows users to
 3. Filter or sort repositories based on stars, forks, or recent activity.
 
 ## Screenshots
-*Include screenshots or GIFs of your app running.*
+![image](https://github.com/user-attachments/assets/758bc5d0-6cc4-49f5-b841-8f13eed6c987)
 
 ## API Reference
 This project uses the **GitHub REST API** to fetch user details and repositories.
